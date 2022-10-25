@@ -1,0 +1,25 @@
+{
+  "name": "discord-template-v14",
+  "version": "1.0.0",
+  "description": "template of discord.js@14",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuroXI/discord-template-v14.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "template",
+    "bot"
+  ],
+  "author": "Victor Gonzales (KuroXI)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KuroXI/discord-template-v14/issues"
+  },
+  "homepage": "https://github.com/KuroXI/discord-template-v14#readme",
+  "dependencies": {
+    "discord.js": "^14.6.0"
+  }
+}
