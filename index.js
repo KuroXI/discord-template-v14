@@ -6,8 +6,8 @@ const config = require('./config');
 
 client.command = new Collection();
 
-fs.readdirSync('./source/events/').filter((file) => file.endsWith('.js')).forEach((file) => {
-    const event = require(`./source/events/${file}`);
+fs.readdirSync(`${__dirname}/source/events`).filter((file) => file.endsWith('.js')).forEach((file) => {
+    const event = require(`${__dirname}/source/events/${file}`);
 
     try {
         (event.config.once)
@@ -16,8 +16,8 @@ fs.readdirSync('./source/events/').filter((file) => file.endsWith('.js')).forEac
     } catch (error) { console.log(error) };
 });
 
-fs.readdirSync('./source/commands/').filter((file) => file.endsWith('.js')).forEach((file) => {
-    const command = require(`./source/commands/${file}`);
+fs.readdirSync(`${__dirname}/source/commands`).filter((file) => file.endsWith('.js')).forEach((file) => {
+    const command = require(`${__dirname}/source/commands/${file}`);
     if (command.config) client.command.set(command.config.data.name, command);
 });
 

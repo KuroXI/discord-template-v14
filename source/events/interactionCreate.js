@@ -10,15 +10,7 @@ module.exports = async (client, interaction) => {
         const commands = client.slash.get(interaction.commandName);
         if (!commands) return;
 
-        try {
-            await commands(client, interaction);
-        } catch (err) {
-            console.error(err);
-
-            return interaction.reply({ embeds: [ new MessageEmbed().setColor('RED')
-                .setDescription(`Error occur while executing the command. Contact an admin to check the console!`)
-            ]});
-        };
+        await commands(client, interaction);
     }
 };
 
